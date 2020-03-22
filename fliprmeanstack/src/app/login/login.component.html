@@ -1,0 +1,49 @@
+<!-- <form (ngSubmit)="onsubmit()">
+    <label for="enter your gmail">enter your gmail</label><br>
+    <input type="mail" placeholder="enter your mail" name="usermail" [(ngModel)]="login.usermail">
+    <br>
+    <label for="enter your password">enter your password</label><br>
+    <input type="password" placeholder="enter your password" name="userpassword" [(ngModel)]="login.userpassword"><br>
+    <p *ngIf="checkpassword">enter the correct password</p>
+<br>
+<div *ngIf="notexists">
+    <p>you doesn't have an account please &nbsp;&nbsp; </p> <a routerLink="/signup">login</a>
+</div>
+<button type="submit">login</button>
+</form>
+<br> -->
+<!-- to handle forgot password case-->
+<!-- extra -->
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+       <span><a mat-button style="font-size: 35px;" href="/" >FLIPR</a></span>
+       <span class="spacer"></span>
+       <a mat-button routerLink="/register">Register</a>
+    </mat-toolbar-row>
+ </mat-toolbar>
+<mat-toolbar>
+    <span>Login</span>
+  </mat-toolbar>
+  
+<mat-card-content>
+    <form class="my-form"  (ngSubmit)="onsubmit()" novalidate>
+     
+           <mat-form-field class="full-width">
+              <mat-label>Email</mat-label>
+              <input matInput type="mail" placeholder="enter your mail" name="usermail" [(ngModel)]="login.usermail">
+           </mat-form-field>
+           <mat-form-field class="full-width">
+              <mat-label>Password</mat-label>
+              <input matInput type="password" placeholder="enter your password" name="userpassword" [(ngModel)]="login.userpassword"><br>
+           </mat-form-field>
+           <p *ngIf="checkpassword">enter the correct password</p>
+<br>
+<div *ngIf="notexists">
+    <p>you doesn't have an account please &nbsp;&nbsp; </p> <a routerLink="/signup">login</a>
+</div>
+             <mat-card-actions>
+                <button mat-raised-button type="submit" color="primary">LOGIN</button>&nbsp;&nbsp;&nbsp;
+                <button mat-raised-button color="primary" (click)="forgotpassord()">Forgot Password</button>
+              </mat-card-actions>
+    </form>
+  </mat-card-content>
