@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "fliprmeanstack"
+  "defaultProject": "fliprmeanstack",
+  "cli": {
+    "analytics": "748c1551-d2ce-4d9e-b050-78fd74472606"
+  }
 }
