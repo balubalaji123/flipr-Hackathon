@@ -1,0 +1,10 @@
+.customboard{
+    width: 150px;
+    height: 100px;
+    margin: 0 auto;
+    margin-top: 5%;
+}
+.button{
+    width: 50px;
+    border-radius: 5px;
+}

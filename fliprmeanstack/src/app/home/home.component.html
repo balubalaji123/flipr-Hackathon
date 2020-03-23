@@ -1,1 +1,24 @@
-<p>home works!</p>
+<mat-card class="card shadow custom">
+        <form [formGroup]="createboard" class="example-form" (ngSubmit)="createcard()">
+            <mat-form-field class="matformclass" class="full-width">
+    <mat-label>Create a card</mat-label>
+<input matInput  type="text" formControlName=boardname>
+</mat-form-field>
+<mat-card-actions>
+    <button [disabled]="!createboard.valid" mat-raised-button type="submit" color="primary">create</button>
+</mat-card-actions>
+
+</form>
+</mat-card>
+<div class="container">
+<div class="row">
+<mat-card *ngFor="let card of initialcards;let i=index" class="card shadow customboard">
+    <mat-card-content>{{card.board}}	</mat-card-content>
+    <mat-card-actions style="text-align: right;">
+        <button  mat-raised-button  color="primary" (click)="cards(i)">create board</button>
+    </mat-card-actions>
+    
+
+</mat-card>
+</div>
+</div>

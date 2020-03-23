@@ -1,0 +1,20 @@
+<form [formGroup]="createcard1" (ngSubmit)="createcard()">
+    <mat-form-field class="matformclass" class="full-width">
+<mat-label>Create a card</mat-label>
+<input matInput  type="text" formControlName=cardname>
+</mat-form-field>
+<mat-card-actions>
+    <button mat-raised-button type="submit" color="primary">create</button>
+</mat-card-actions>
+</form>
+<br>
+<div class="container">
+    <div class="row">
+    <mat-card *ngFor="let card of existingcards.cards;let i=index" class="card shadow customboard">
+        <mat-card-content>{{card.balaji}}	</mat-card-content>
+        <mat-card-actions style="text-align: right;">
+            <button mat-raised-button  color="primary" >create card</button>
+        </mat-card-actions>
+    </mat-card>
+    </div>
+    </div>

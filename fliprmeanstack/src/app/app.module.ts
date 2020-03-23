@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FirstpageComponent } from './firstpage/firstpage.component';
 import {MatButtonModule,MatToolbarModule} from  '@angular/material';
 import {MatNativeDateModule,MatDatepickerModule,MatIconModule,MatCheckboxModule, MatCardModule,MatFormFieldModule,MatInputModule,MatRadioModule,MatListModule,} from  '@angular/material';
+import { CreatecardComponent } from './createcard/createcard.component';
 
 
 let config = new AuthServiceConfig([
@@ -33,18 +34,20 @@ export function provideConfig() {
     SignupComponent,
     HomeComponent,
     ForgotpasswordComponent,
-    FirstpageComponent
+    FirstpageComponent,
+    CreatecardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     SocialLoginModule,
     HttpClientModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatToolbarModule,
-    MatNativeDateModule,MatDatepickerModule,MatIconModule,MatCheckboxModule, MatCardModule,MatFormFieldModule,MatInputModule,MatRadioModule,MatListModule,
+    MatNativeDateModule,MatDatepickerModule,MatIconModule,MatCheckboxModule, MatCardModule,MatFormFieldModule,MatInputModule,MatRadioModule,MatListModule
   ],
   exports:[
     MatButtonModule,

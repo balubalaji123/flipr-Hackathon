@@ -14,7 +14,6 @@ public usermail
 public extra=true
 public showupdate=false
   constructor(private forgotpass:ForgotpasswordService,private router:Router) { }
-
   ngOnInit() {
   }
   onsubmit(mail){
